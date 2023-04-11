@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@android:color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_home" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_below="@+id/toolbarwrap"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/newCommentContainer">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+        <RelativeLayout
+            android:id="@+id/activity_post_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/complainInfoPanel"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:id="@+id/orderInfoPanel"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.rovaindu.homeservice.utils.views.TextViewAr
+                            android:id="@+id/complainTitle"
+                            android:textAlignment="center"
+                            android:layout_marginStart="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:layout_below="@+id/orderInfoPanel"
+                    android:id="@+id/orderStatusPanel"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.rovaindu.homeservice.utils.views.TextViewAr
+                            android:id="@+id/complainContent"
+                            android:textAlignment="center"
+                            android:layout_marginStart="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="14sp"
+                            />
+                    </LinearLayout>
+
+
+
+
+
+                </RelativeLayout>
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:layout_below="@+id/orderStatusPanel"
+                    android:id="@+id/complainDate"
+                    android:textAlignment="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/loading"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_below="@id/complainInfoPanel"
+                android:id="@+id/staticsPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/authorImageView"
+                    android:layout_marginBottom="@dimen/intrinsic_padding"
+                    android:layout_toStartOf="@+id/authorImageView"
+                    android:layout_toLeftOf="@+id/authorImageView"
+                    android:paddingLeft="@dimen/large_intrinsic_padding"
+                    android:paddingRight="@dimen/large_intrinsic_padding"
+                    android:textAppearance="@style/TextAppearance.Title"
+                    android:layout_alignEnd="@+id/authorImageView"
+                    android:layout_alignRight="@+id/authorImageView" />
+
+
+                <RelativeLayout
+                    android:id="@+id/commentsParentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/large_intrinsic_padding"
+                    android:paddingRight="@dimen/large_intrinsic_padding">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/commentsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/comment_list_item" />
+
+                    <ProgressBar
+                        android:id="@+id/commentsProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/warningCommentsTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/intrinsic_padding"
+                        android:text="@string/internet_connection_failed"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+        </TableLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_above="@+id/newCommentContainer"
+        android:background="@drawable/top_shadow" />
+
+    <LinearLayout
+        android:id="@+id/newCommentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/comment_text_hint"
+            android:inputType="textMultiLine"
+            android:maxHeight="@dimen/new_comment_max_height"
+            android:minHeight="@dimen/new_comment_min_height"
+            android:padding="@dimen/intrinsic_padding" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/intrinsic_padding"
+            android:background="@drawable/send_comment_button_bg"
+            android:enabled="false"
+            android:minWidth="0dp"
+            android:paddingLeft="@dimen/large_intrinsic_padding"
+            android:paddingRight="@dimen/large_intrinsic_padding"
+            android:text="@string/send_comment"
+            android:textColor="?android:colorPrimaryDark" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+

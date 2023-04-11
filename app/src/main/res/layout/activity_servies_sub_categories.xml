@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.servies.ServiesSubCategoriesActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/mCollasping"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:background="@drawable/pojo_subcategories_bg"
+                app:layout_collapseMode="parallax"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/category_image"
+                        android:src="@drawable/pojo_agent_servies"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/category_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:text="@string/pogo_cat_cleaning"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/category_image"
+                        app:layout_constraintTop_toBottomOf="@+id/category_image" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:visibility="invisible"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/backButton"
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_arrow_rtl_24dp" />
+                    <com.rovaindu.homeservice.utils.views.TextViewAr
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:text="@string/app_title"
+                        android:maxLines="1"
+                        android:id="@+id/appname"
+                        android:singleLine="true"
+                        android:layout_toRightOf="@+id/backButton"
+                        android:layout_toEndOf="@+id/backButton"
+                        android:layout_centerVertical="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:focusableInTouchMode="false"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:scaleType="center"
+                        android:layout_width="56dp"
+                        android:layout_marginEnd="60dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/search"
+                        app:srcCompat="@drawable/ic_search_24dp"
+                        android:layout_alignEnd="@+id/notification_panel"/>
+
+                    <RelativeLayout
+
+                        android:layout_marginEnd="8dp"
+                        android:id="@+id/notification_panel"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent">
+
+
+
+                        <ImageView
+                            android:focusableInTouchMode="false"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:scaleType="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="56dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/notification"
+                            app:srcCompat="@drawable/ic_notifications_24dp"/>
+                        <com.rovaindu.homeservice.utils.views.TextViewAr
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/circle_red"
+                            android:textColor="?android:colorAccent"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/defaultMargin"
+                            android:textSize="10sp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/count"
+                            android:text="1"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <com.rovaindu.homeservice.utils.views.TextViewAr
+                   android:layout_margin="8dp"
+                   android:textSize="18sp"
+                   android:textStyle="bold"
+                   android:id="@+id/chooserTXT"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/choose_serives"/>
+               <com.rovaindu.homeservice.utils.views.compoundbuttongroup.CompoundButtonGroup
+                   android:layout_marginStart="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginBottom="16dp"
+                   android:layout_marginTop="16dp"
+                   android:layout_below="@+id/chooserTXT"
+                   android:id="@+id/subCategoryGroup"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:entries="@array/servies"
+                   app:compoundType="check_box"/>
+
+               <!--Contact Details-->
+               <LinearLayout
+                   android:id="@+id/contentContainer"
+                   android:layout_below="@+id/subCategoryGroup"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginBottom="16dp"
+                   android:layout_marginTop="16dp"
+                   android:background="@drawable/circularbordersolid"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <com.rovaindu.homeservice.utils.views.TextViewAr
+                           android:layout_marginStart="20dp"
+                           android:textColor="@color/black"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/we_ensure"
+                           android:textSize="17sp"
+                           android:fontFamily="@font/proximanovaregular"
+                           android:textStyle="bold" />
+
+                       <Space
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1" />
+
+                       <com.rovaindu.homeservice.utils.views.TextViewAr
+                           android:visibility="gone"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/edit"
+                           android:textColor="@color/secondaryColorTeal"
+                           android:layout_marginEnd="10dp"
+                           android:textSize="14sp" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:padding="4dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="16dp"
+                       android:orientation="vertical">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="4dp"
+                           android:padding="10dp">
+
+                           <ImageView
+                               android:layout_width="24dp"
+                               android:layout_height="24dp"
+                               app:srcCompat="@drawable/pojo_ic_guard" />
+                                <LinearLayout
+                                    android:layout_marginStart="20dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                               <com.rovaindu.homeservice.utils.views.TextViewAr
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/services_ensure"
+                                   android:textColor="@color/black"
+                                   android:layout_marginEnd="10dp"
+                                   android:textSize="18sp"
+                                   android:textStyle="bold"/>
+                               <com.rovaindu.homeservice.utils.views.TextViewAr
+                                   android:layout_marginTop="4dp"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/ensure_days"
+                                   android:textColor="@color/grey_500"
+                                   android:layout_marginEnd="10dp"
+                                   android:textSize="14sp"
+                                   />
+                           </LinearLayout>
+                       </LinearLayout>
+                       <LinearLayout
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="4dp"
+                           android:padding="10dp">
+
+                           <ImageView
+                               android:layout_width="24dp"
+                               android:layout_height="24dp"
+                               app:srcCompat="@drawable/pojo_ic_star" />
+
+                           <LinearLayout
+                               android:layout_marginStart="20dp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:orientation="vertical">
+                               <com.rovaindu.homeservice.utils.views.TextViewAr
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/customer_response"
+                                   android:textColor="@color/black"
+                                   android:layout_marginEnd="10dp"
+                                   android:textSize="18sp"
+                                   android:textStyle="bold"/>
+                               <com.rovaindu.homeservice.utils.views.TextViewAr
+                                   android:layout_marginTop="4dp"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/customer_response_rating"
+                                   android:textColor="@color/grey_500"
+                                   android:layout_marginEnd="10dp"
+                                   android:textSize="14sp"
+                                   />
+                           </LinearLayout>
+                       </LinearLayout>
+
+                       <LinearLayout
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="4dp"
+                           android:padding="10dp">
+
+                           <ImageView
+                               android:layout_width="24dp"
+                               android:layout_height="24dp"
+                               app:srcCompat="@drawable/pojo_ic_heart" />
+
+                           <LinearLayout
+                               android:layout_marginStart="20dp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:orientation="vertical">
+                               <com.rovaindu.homeservice.utils.views.TextViewAr
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/happy_customer"
+                                   android:textColor="@color/black"
+                                   android:layout_marginEnd="10dp"
+                                   android:textSize="18sp"
+                                   android:textStyle="bold"/>
+                               <com.rovaindu.homeservice.utils.views.TextViewAr
+                                   android:layout_marginTop="4dp"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/customer_response_rating"
+                                   android:textColor="@color/grey_500"
+                                   android:layout_marginEnd="10dp"
+                                   android:textSize="14sp"
+                                   />
+                           </LinearLayout>
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="4dp"
+                           android:padding="10dp">
+
+                           <ImageView
+                               android:layout_width="24dp"
+                               android:layout_height="24dp"
+                               app:srcCompat="@drawable/pojo_ic_like" />
+
+                           <LinearLayout
+                               android:layout_marginStart="20dp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:orientation="vertical">
+                               <com.rovaindu.homeservice.utils.views.TextViewAr
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/pf_servies_provider"
+                                   android:textColor="@color/black"
+                                   android:layout_marginEnd="10dp"
+                                   android:textSize="18sp"
+                                   android:textStyle="bold"/>
+                               <com.rovaindu.homeservice.utils.views.TextViewAr
+                                   android:layout_marginTop="4dp"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/customer_response_rating"
+                                   android:textColor="@color/grey_500"
+                                   android:layout_marginEnd="10dp"
+                                   android:textSize="14sp"
+                                   />
+                           </LinearLayout>
+                       </LinearLayout>
+
+
+
+                   </LinearLayout>
+               </LinearLayout>
+               <com.rovaindu.homeservice.utils.views.TextViewAr
+                   android:layout_margin="16dp"
+                   android:layout_below="@+id/contentContainer"
+                   android:id="@+id/btnProcced"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:background="@drawable/buy_button_bg"
+                   android:fontFamily="@font/nunito_bold"
+                   android:gravity="center"
+                   android:text="@string/btncontinue"
+                   android:textAlignment="center"
+                   android:textColor="?android:colorPrimaryDark"
+                   android:textSize="18sp"
+                   />
+           </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:visibility="gone"
+        android:src="@drawable/ic_account_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|right|end"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

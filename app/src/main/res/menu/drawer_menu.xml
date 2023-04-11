@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_servies"
+            android:icon="@drawable/ic_pojo_servies"
+            android:visible="false"
+            android:title="@string/services" />
+
+        <item android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_colored"
+            android:title="@string/my_profile" />
+
+        <item android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_contact"
+            android:title="@string/contact_us" />
+
+        <item android:id="@+id/nav_requests"
+            android:icon="@drawable/ic_request"
+            android:title="@string/requests" />
+
+        <item android:id="@+id/nav_complains"
+            android:icon="@drawable/ic_complain"
+            android:title="@string/complain" />
+        <item android:id="@+id/nav_auth"
+            android:icon="@drawable/ic_complain"
+            android:title="@string/log_out" />
+    </group>
+</menu>

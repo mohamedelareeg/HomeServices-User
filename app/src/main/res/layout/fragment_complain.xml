@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.rovaindu.homeservice.utils.views.TextViewAr
+        android:layout_margin="16dp"
+        android:id="@+id/OrderNotify"
+        android:layout_marginTop="2dp"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        android:text="@string/add_complain"
+
+        android:textSize="24sp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/OrderNotify"
+        android:id="@+id/recComplains"
+        android:layout_width="match_parent"
+        android:nestedScrollingEnabled="false"
+        android:padding="@dimen/_4sdp"
+        android:layout_height="match_parent" />
+</RelativeLayout>

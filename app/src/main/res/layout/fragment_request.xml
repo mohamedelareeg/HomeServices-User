@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.rovaindu.homeservice.utils.views.TextViewAr
+        android:layout_margin="8dp"
+        android:id="@+id/OrderNotify"
+        android:layout_marginTop="2dp"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_info"
+        android:text="@string/ordernote"
+
+        android:textSize="14sp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/OrderNotify"
+        android:id="@+id/recOrders"
+        android:layout_width="match_parent"
+        android:nestedScrollingEnabled="false"
+        android:padding="@dimen/_4sdp"
+        android:layout_height="match_parent" />
+</RelativeLayout>

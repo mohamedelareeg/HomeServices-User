@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.rovaindu.homeservice.utils.views.shimmer.ShimmerFrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parentShimmerLayout"
+        android:duration="700">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+                <include layout="@layout/single_row_view"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.rovaindu.homeservice.utils.views.shimmer.ShimmerFrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/parentShimmerLayout"
+        android:id="@+id/recAgents"
+        android:scrollbars="vertical"
+        android:nestedScrollingEnabled="false"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+        <com.rovaindu.homeservice.utils.views.TextViewAr
+
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="?android:colorPrimary"
+            android:text="@string/continue_order"
+            android:elevation="40dp"
+            android:textSize="24sp"
+            android:textColor="?android:colorPrimaryDark"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rovaindu.homeservice">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".controller.forgetpassword.ForgetPasswordActivity"></activity>
+        <activity android:name=".controller.profile.EditProfileActivity" />
+        <activity android:name=".auth.CreateAgentSecondActivity" />
+        <activity android:name=".controller.chat.ChatActivity" />
+        <activity android:name=".controller.chat.ConversationsActivity" />
+        <activity android:name=".controller.ComplainActivity" />
+        <activity android:name=".auth.CreateCustomerDetailsActivity" />
+        <activity android:name=".controller.orders.OrderFailureActivity" />
+        <activity android:name=".controller.orders.OrderSuccessActivity" />
+        <activity android:name=".controller.orders.OrderCartActivity" />
+        <activity android:name=".controller.orders.OrderDetailsActivity" />
+        <activity android:name=".controller.servies.ServiesDatePickerActivity">
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/api_key" />
+        </activity>
+        <activity android:name=".controller.agent.ViewAgentActivity" />
+        <activity android:name=".controller.agent.AgentsActivity" />
+        <activity android:name=".controller.servies.ServiesSubCategoriesActivity" />
+        <activity android:name=".controller.servies.InprogressActivity" />
+        <activity android:name=".controller.SearchActivity" />
+        <activity android:name=".auth.CreateAgentFirstActivity" />
+        <activity android:name=".auth.CreateCustomerActivity" />
+        <activity android:name=".auth.SignupActivity" />
+        <activity android:name=".auth.LoginActivity" />
+        <activity android:name=".controller.AboutActivity" />
+        <activity android:name=".controller.SettingsActivity" />
+        <activity android:name=".controller.ProfileActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controller.map.base.PlacePickerActivity" />
+        <activity android:name=".controller.agent.AgentsServiesActivity" />
+        <activity android:name=".controller.orders.TrackActivity" />
+        <activity android:name=".controller.agents.AgentsActivity" />
+        <activity android:name=".controller.map.MapActivity" />
+        <activity android:name=".controller.agents.ViewAgentActivity" />
+        <activity android:name=".controller.agents.AgentsServiesActivity" />
+        <activity android:name=".controller.forgetpassword.ResetPasswordActivity" />
+        <activity android:name=".controller.ContactUsActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

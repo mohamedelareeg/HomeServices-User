@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="5"
+    android:id="@+id/AgentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="18dp"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:cardElevation="10dp"
+    app:rippleColor="?android:colorAccent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/ll_item_view"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:id="@+id/detailsPanel"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:layout_marginTop="8dp"
+                android:id="@+id/media_image"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/agentImg"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+
+                    />
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <LinearLayout
+                android:id="@+id/agentNamePanel"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/media_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:id="@+id/agentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@+id/media_image"
+                    android:text="@string/loading"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/agentSelectNotify"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ratingPanel"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/agentNamePanel"
+                android:layout_toEndOf="@+id/media_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RatingBar
+                    android:id="@+id/agentRatingbar"
+                    style="@android:style/Widget.Material.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:progressTint="?android:colorAccent"
+                    android:rating="0"
+                    android:stepSize="1"
+
+                    />
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:layout_marginStart="10dp"
+                    android:text="@string/loading"
+                    android:id="@+id/agentRating"
+                    android:textSize="12sp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/agentPricePanel"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/ratingPanel"
+                android:layout_toEndOf="@+id/media_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:text="@string/lowest_agent"
+                    android:textSize="12sp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:text="@string/loading"
+                    android:id="@+id/agentPrice"
+                    android:textSize="12sp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.rovaindu.homeservice.utils.views.TextViewAr
+                android:text="@string/agent_note"
+                android:layout_below="@+id/agentPricePanel"
+                android:layout_toEndOf="@+id/media_image"
+                android:id="@+id/agentNote"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/agentpaymentPanel"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/agentNote"
+                android:layout_toEndOf="@+id/media_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:text="@string/payment_method"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:text="@string/loading"
+                    android:id="@+id/agentPayment"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <RadioButton
+                android:enabled="false"
+                android:id="@+id/agentSelected"
+                android:buttonTint="?android:colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                 />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

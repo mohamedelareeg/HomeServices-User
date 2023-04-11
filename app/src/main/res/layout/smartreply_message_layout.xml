@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="16dp"
+    android:layout_marginLeft="8dp"
+    android:background="@drawable/left_border"
+    android:id="@+id/smartreplyMessageLayout"
+    android:layout_above="@+id/bottom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.rovaindu.homeservice.utils.views.chat.SmartReplyList
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/reply_list_row"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/rv_smartReply"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="5"
+    android:id="@+id/AgentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="4dp"
+    >
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/ll_item_view"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:id="@+id/detailsPanel"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/infoPanel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:id="@+id/serviesName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/our_goal"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:id="@+id/serviesDesc"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lorem_pojo"
+                    android:textColor="@color/grey_500"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/contentPanel"
+                android:layout_marginTop="32dp"
+                android:layout_below="@+id/infoPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:padding="10dp"
+                    android:id="@+id/additional_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_details"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/field_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/additional_comment"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/write_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="8"
+                    android:maxLength="240"
+                    android:textAlignment="textStart"
+                    android:scrollHorizontally="false" />
+            </RelativeLayout>
+            <com.rovaindu.homeservice.utils.views.TextViewAr
+                android:layout_below="@+id/contentPanel"
+                android:layout_margin="8dp"
+                android:layout_weight="3"
+                android:padding="16dp"
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="?android:colorPrimary"
+                android:text="@string/send"
+                android:elevation="40dp"
+                android:textSize="24sp"
+                android:textColor="?android:colorPrimaryDark"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</LinearLayout>

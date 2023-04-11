@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    tools:context=".auth.LoginActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1">
+
+        <include layout="@layout/layout_top_tabs"/>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/relLayout1"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- top toolbar -->
+
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+
+                android:src="@drawable/ic_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+                <LinearLayout
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_below="@+id/logo"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="10">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_weight="5"
+                        android:id="@+id/agentPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardCornerRadius="18dp"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:cardElevation="10dp"
+                        app:rippleColor="?android:colorPrimaryDark">
+                        <RelativeLayout
+                            android:background="@drawable/borderyellow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_margin="16dp"
+                                android:background="@drawable/borderyellow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/agentImg"
+                                    android:src="@drawable/ic_new_customer"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toTopOf="@id/agentName"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/agentName"
+                                    />
+
+                                <TextView
+                                    android:layout_marginTop="16dp"
+                                    android:id="@+id/agentName"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:adjustViewBounds="true"
+                                    android:gravity="center"
+                                    android:scaleType="fitCenter"
+                                    android:text="@string/create_agent"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/agentImg"
+                                    app:layout_constraintTop_toBottomOf="@+id/agentImg" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_weight="5"
+                        android:id="@+id/customerPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardCornerRadius="18dp"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:cardElevation="10dp"
+                        app:rippleColor="?android:colorPrimaryDark">
+                        <RelativeLayout
+                            android:background="@drawable/borderyellow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_margin="16dp"
+                                android:background="@drawable/borderyellow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/customerImg"
+                                    android:src="@drawable/ic_new_agent"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toTopOf="@id/customerName"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/customerName"
+                                    />
+
+                                <TextView
+                                    android:layout_marginTop="16dp"
+                                    android:id="@+id/customerName"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:adjustViewBounds="true"
+                                    android:gravity="center"
+                                    android:scaleType="fitCenter"
+                                    android:text="@string/create_customer"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/customerImg"
+                                    app:layout_constraintTop_toBottomOf="@+id/customerImg" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+</RelativeLayout>

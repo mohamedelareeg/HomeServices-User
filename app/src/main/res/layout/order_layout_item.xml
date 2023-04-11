@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="5"
+    android:id="@+id/AgentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="18dp"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:cardElevation="10dp"
+    app:rippleColor="?android:colorAccent">
+    <RelativeLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_margin="8dp"
+        android:id="@+id/orderInfoPanel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.rovaindu.homeservice.utils.views.TextViewAr
+                android:id="@+id/orderName"
+                android:textAlignment="center"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <com.rovaindu.homeservice.utils.views.TextViewAr
+            android:id="@+id/orderDate"
+            android:textAlignment="center"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/loading"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="8dp"
+        android:layout_below="@+id/orderInfoPanel"
+        android:id="@+id/orderStatusPanel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_order_staus" />
+            <com.rovaindu.homeservice.utils.views.TextViewAr
+                android:id="@+id/orderStatus"
+                android:textAlignment="center"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:padding="4dp"
+            android:layout_marginStart="20dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_arrow_ltr_grey_24dp" />
+
+
+
+    </RelativeLayout>
+        <LinearLayout
+
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/orderStatusPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <com.rovaindu.homeservice.utils.views.TextViewAr
+                android:layout_margin="8dp"
+                android:layout_weight="3"
+                android:padding="16dp"
+                android:id="@+id/btnCallAgent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/primaryColorYellowBlack"
+                android:text="@string/call_agent"
+                android:elevation="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/primaryDarkColorYellowBlack"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+            <com.rovaindu.homeservice.utils.views.TextViewAr
+                android:layout_margin="8dp"
+                android:layout_weight="3"
+                android:padding="16dp"
+                android:id="@+id/btnCallApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryDarkColorYellowBlack"
+                android:text="@string/contact_with_app"
+                android:elevation="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/primaryColorYellowBlack"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

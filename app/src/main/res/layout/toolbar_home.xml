@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?android:colorPrimaryDark"
+    android:elevation="2dp"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/backButton"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow_rtl_24dp" />
+        <com.rovaindu.homeservice.utils.views.TextViewAr
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:id="@+id/appname"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:layout_toEndOf="@+id/backButton"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:visibility="gone"
+            android:focusableInTouchMode="false"
+            android:focusable="true"
+            android:clickable="true"
+
+            android:scaleType="center"
+
+            android:layout_width="56dp"
+            android:layout_marginEnd="60dp"
+            android:layout_height="match_parent"
+            android:id="@+id/search"
+            app:srcCompat="@drawable/ic_search_24dp"
+            android:layout_alignEnd="@+id/notification_panel"/>
+
+        <RelativeLayout
+            android:visibility="invisible"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/notification_panel"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="56dp"
+            android:layout_height="match_parent">
+
+
+
+            <ImageView
+                android:focusableInTouchMode="false"
+                android:focusable="true"
+                android:clickable="true"
+                android:scaleType="center"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:id="@+id/notification"
+                app:srcCompat="@drawable/ic_notifications_24dp"/>
+            <com.rovaindu.homeservice.utils.views.TextViewAr
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_red"
+                android:textColor="?android:colorAccent"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/defaultMargin"
+                android:textSize="10sp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/count"
+                android:text="1"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

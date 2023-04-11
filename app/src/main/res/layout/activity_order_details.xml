@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_home" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <ScrollView
+
+        android:id="@+id/scroll_panel"
+        android:layout_below="@id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+        <LinearLayout
+
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_weight="5"
+                android:id="@+id/CategoryPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="18dp"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                app:cardElevation="10dp"
+                app:rippleColor="?android:colorAccent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <com.rovaindu.homeservice.utils.views.TextViewAr
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:text="@string/pay_method"
+                        android:textColor="@color/black" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_width_small"
+                        android:background="@color/grey_200"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"/>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                app:srcCompat="@drawable/pojo_ic_cashpayment" />
+
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:textAlignment="center"
+
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/cash"
+                                android:textColor="@color/black"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="16sp"
+                                />
+                        </LinearLayout>
+
+
+                        <RadioButton
+                            android:checked="true"
+                            android:buttonTint="?android:colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                             />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="18dp"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                app:cardElevation="10dp"
+                app:rippleColor="?android:colorAccent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/pojo_ic_ordertime" />
+                        <LinearLayout
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/expected_reach_date"
+                                android:textColor="@color/black"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:id="@+id/orderDate"
+                                android:layout_marginTop="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/loading"
+                                android:textColor="@color/grey_500"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"
+                                />
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:id="@+id/orderTime"
+                                android:layout_marginTop="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/loading"
+                                android:textColor="@color/grey_500"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                      >
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/pojo_ic_serviesprovider" />
+
+                        <LinearLayout
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/servies_provider"
+                                android:textColor="@color/black"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:id="@+id/orderProvider"
+                                android:layout_marginTop="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/loading"
+                                android:textColor="@color/grey_500"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="18dp"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                app:cardElevation="10dp"
+                app:rippleColor="?android:colorAccent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <com.rovaindu.homeservice.utils.views.TextViewAr
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:text="@string/order_details"
+                        android:textColor="@color/black" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_width_small"
+                        android:background="@color/grey_200"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"/>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.recyclerview.widget.RecyclerView
+
+                            android:id="@+id/recServies"
+                            android:layout_width="match_parent"
+                            android:nestedScrollingEnabled="false"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_height="wrap_content" />
+
+
+                        <View
+                            android:layout_below="@+id/recServies"
+                            android:id="@+id/shadowRec"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_width_small"
+                            android:background="@color/grey_200"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp"/>
+                        <RelativeLayout
+                            android:id="@+id/costPanel"
+                            android:layout_marginTop="4dp"
+                            android:layout_below="@+id/shadowRec"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <com.rovaindu.homeservice.utils.views.TextViewAr
+                                    android:textAlignment="center"
+
+                                    android:layout_marginStart="10dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lowest_provider_cost"
+                                    android:textColor="@color/black"
+                                    android:layout_marginEnd="10dp"
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    />
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    app:srcCompat="@drawable/pojo_ic_info" />
+
+
+                            </LinearLayout>
+
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:textAlignment="center"
+                                android:id="@+id/minCost"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:text="@string/loading"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                />
+
+                        </RelativeLayout>
+                        <com.rovaindu.homeservice.utils.views.TextViewAr
+                            android:id="@+id/costNotify"
+                            android:layout_marginTop="2dp"
+                            android:padding="20dp"
+                            android:layout_below="@+id/costPanel"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_bg_info"
+                            android:text="@string/minimum_cost_notify"
+
+                            android:textSize="14sp"
+                            />
+                        <com.rovaindu.homeservice.utils.views.TextViewAr
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_below="@+id/costNotify"
+                            android:id="@+id/btnViewOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/simi_curved_btn"
+                            android:fontFamily="@font/nunito_bold"
+                            android:gravity="center"
+                            android:text="@string/order_view"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            />
+                        <com.rovaindu.homeservice.utils.views.TextViewAr
+                            android:layout_below="@+id/btnViewOrder"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vat_un_included"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="14sp"
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_width_small"
+                android:background="?android:colorAccent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="18dp"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                app:cardElevation="10dp"
+                app:rippleColor="?android:colorAccent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.rovaindu.homeservice.utils.views.TextViewAr
+                        android:padding="10dp"
+                        android:id="@+id/additional_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/additional_comments"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/field_body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/additional_comment"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="@string/write_comment_here"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"
+                        android:maxLength="120"
+                        android:scrollHorizontally="false" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="18dp"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                app:cardElevation="10dp"
+                app:rippleColor="?android:colorAccent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/pojo_ic_parts" />
+                        <LinearLayout
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/parts"
+                                android:textColor="@color/black"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:layout_marginTop="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/parts_info"
+                                android:textColor="@color/grey_500"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/pojo_ic_unordinery" />
+
+                        <LinearLayout
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/unordinery_jobs"
+                                android:textColor="@color/black"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+                            <com.rovaindu.homeservice.utils.views.TextViewAr
+                                android:layout_marginTop="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/unordinery_jobs_info"
+                                android:textColor="@color/grey_500"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+
+                    android:id="@+id/btnProcced"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="?android:colorPrimary"
+                    android:text="@string/please_order"
+                    android:elevation="40dp"
+                    android:textSize="24sp"
+                    android:textColor="?android:colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        </TableLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

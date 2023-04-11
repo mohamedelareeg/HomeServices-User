@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="5"
+    android:id="@+id/AgentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="18dp"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:cardElevation="10dp"
+    app:rippleColor="?android:colorAccent">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:id="@+id/ll_item_view"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+
+                android:id="@+id/detailsPanel"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.github.florent37.shapeofview.shapes.CircleView
+                    android:id="@+id/media_image"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:id="@+id/agentImg"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+
+                        />
+                </com.github.florent37.shapeofview.shapes.CircleView>
+
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:id="@+id/agentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@+id/media_image"
+                    android:text="@string/loading"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/ratingPanel"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/agentName"
+                    android:layout_toEndOf="@+id/media_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RatingBar
+                        android:id="@+id/agentRatingbar"
+                        style="@android:style/Widget.Material.Light.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="?android:colorAccent"
+                        android:rating="0"
+                        android:stepSize="1"
+
+                        />
+                    <com.rovaindu.homeservice.utils.views.TextViewAr
+                        android:layout_marginStart="10dp"
+                        android:text="@string/loading"
+                        android:id="@+id/agentRating"
+                        android:textSize="12sp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.rovaindu.homeservice.utils.views.TextViewAr
+                    android:text="@string/loading"
+                    android:layout_below="@+id/ratingPanel"
+                    android:layout_toEndOf="@+id/media_image"
+                    android:id="@+id/agentDesc"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_margin="4dp"
+                android:layout_below="@+id/detailsPanel"
+                android:id="@+id/jobInformationPanel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:weightSum="9">
+
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+
+                        app:srcCompat="@drawable/pojo_ic_comments" />
+
+                    <com.rovaindu.homeservice.utils.views.AutoFitTextView
+                        android:padding="2dp"
+
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:layout_marginStart="2dp"
+                        android:id="@+id/commentsTXT"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:text="@string/loading"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+
+                        app:srcCompat="@drawable/pojo_ic_cost" />
+
+                    <com.rovaindu.homeservice.utils.views.AutoFitTextView
+                        android:padding="2dp"
+                        android:textSize="12sp"
+                        android:layout_marginStart="2dp"
+                        android:id="@+id/costTXT"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:textAlignment="center"
+                        android:text="@string/loading"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+
+                        app:srcCompat="@drawable/pojo_ic_location" />
+
+                    <com.rovaindu.homeservice.utils.views.AutoFitTextView
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:layout_marginStart="2dp"
+                        android:id="@+id/distanceTXT"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:text="@string/loading"
+                         />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

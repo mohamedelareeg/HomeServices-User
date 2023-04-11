@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/defaultFragment">
+
+    <fragment
+        android:id="@+id/nav_servies"
+        android:name="com.rovaindu.homeservice.fragment.HomeFragment"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.rovaindu.homeservice.fragment.ProfileFragment"
+        android:label="@string/my_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.rovaindu.homeservice.fragment.ContactFragment"
+        android:label="@string/contact"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_requests"
+        android:name="com.rovaindu.homeservice.fragment.RequestFragment"
+        android:label="@string/requests"
+        tools:layout="@layout/fragment_request" />
+
+    <fragment
+        android:id="@+id/nav_complains"
+        android:name="com.rovaindu.homeservice.fragment.ComplainFragment"
+        android:label="@string/complain"
+        tools:layout="@layout/fragment_complain" />
+    <fragment
+        android:id="@+id/defaultFragment"
+        android:name="com.rovaindu.homeservice.fragment.HomeFragment"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+</navigation>

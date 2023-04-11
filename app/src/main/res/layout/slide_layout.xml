@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+
+
+    <com.rovaindu.homeservice.utils.views.TextViewAr
+
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="30dp"
+        android:textSize="24sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="@string/loading"
+        android:textColor="@color/black"
+        />
+
+
+
+    <com.rovaindu.homeservice.utils.views.TextViewAr
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeading"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+        android:text="@string/loading"
+        android:textColor="@color/black"
+        >
+    </com.rovaindu.homeservice.utils.views.TextViewAr>
+
+
+
+</RelativeLayout>

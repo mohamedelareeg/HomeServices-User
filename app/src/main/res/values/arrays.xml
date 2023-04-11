@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="examples_return">
+        <item>@string/services_ensure</item>
+        <item>@string/pf_servies_provider</item>
+
+    </string-array>
+</resources>

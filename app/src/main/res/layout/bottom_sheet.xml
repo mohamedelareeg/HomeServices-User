@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_sheet_height"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="120dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/language_panel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_flag"/>
+
+        <com.rovaindu.homeservice.utils.views.TextViewAr
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            style="@style/fonts"
+            android:layout_weight="0.9"
+            android:text="@string/language"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="?android:colorAccent"/>
+
+
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="2dp"
+        app:cardElevation="4dp"
+        android:background="?android:colorBackground">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp">
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:visibility="gone"
+                android:id="@+id/switch_dark_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="4dp"
+                android:paddingRight="8dp"
+
+                android:text="@string/dark_mode"
+                android:paddingEnd="8dp"
+                android:paddingStart="4dp" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/seperator"/>
+            <com.rovaindu.homeservice.utils.views.TextViewAr
+                style="@style/Text.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:text="@string/theme"
+                android:paddingStart="8dp" />
+            <com.rovaindu.homeservice.utils.views.ThemeView
+                android:id="@+id/theme_selected"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="4dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="4dp" />
+
+        </LinearLayout></androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="?android:colorBackground"/>
+
+</LinearLayout>

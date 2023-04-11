@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="fill"
+        android:drawable="@drawable/ic_colored_background"
+
+        />
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/ic_person_24dp"
+        android:top="24dp"
+        android:bottom="24dp"
+        android:left="24dp"
+        android:right="24dp"
+        />
+
+</layer-list>

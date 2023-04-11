@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="CustomTextView">
+        <attr name="drawableStartCompat" format="reference"/>
+        <attr name="drawableEndCompat" format="reference"/>
+        <attr name="drawableTopCompat" format="reference"/>
+        <attr name="drawableBottomCompat" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <attr name="animDuration" format="integer" />
+        <attr name="animAlphaStart" format="float" />
+        <attr name="expandText" format="string" />
+        <attr name="collapseText" format="string" />
+    </declare-styleable>
+    <declare-styleable name="MaterialSpinner" tools:ignore="ResourceName">
+        <attr format="color" name="ms_arrow_tint"/>
+        <attr format="boolean" name="ms_hide_arrow"/>
+        <attr format="color" name="ms_background_color"/>
+        <attr format="color" name="ms_text_color"/>
+        <attr format="dimension" name="ms_dropdown_max_height"/>
+        <attr format="dimension" name="ms_dropdown_height">
+            <enum name="fill_parent" value="-1"/>
+            <enum name="match_parent" value="-1"/>
+            <enum name="wrap_content" value="-2"/>
+        </attr>
+        <attr format="integer" name="ms_background_selector"/>
+        <attr format="dimension" name="ms_padding_top"/>
+        <attr format="dimension" name="ms_padding_left"/>
+        <attr format="dimension" name="ms_padding_bottom"/>
+        <attr format="dimension" name="ms_padding_right"/>
+        <attr format="dimension" name="ms_popup_padding_top"/>
+        <attr format="dimension" name="ms_popup_padding_left"/>
+        <attr format="dimension" name="ms_popup_padding_bottom"/>
+        <attr format="dimension" name="ms_popup_padding_right"/>
+        <attr format="string" name="ms_hint"/>
+        <attr format="color" name="ms_hint_color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CompoundButtonGroup">
+        <attr name="entries" format="reference" />
+        <attr name="numCols" format="integer" />
+        <attr name="labelOrder" format="enum">
+            <enum name="before" value="0" />
+            <enum name="after" value="1" />
+        </attr>
+        <attr name="compoundType" format="enum">
+            <enum name="check_box" value="0" />
+            <enum name="radio" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ShimmerFrameLayout">
+        <attr name="shimmer_clip_to_children" format="boolean"/>
+        <attr name="shimmer_colored" format="boolean"/>
+        <attr name="shimmer_base_color" format="color"/>
+        <attr name="shimmer_highlight_color" format="color"/>
+        <attr name="shimmer_base_alpha" format="float"/>
+        <attr name="shimmer_highlight_alpha" format="float"/>
+        <attr name="shimmer_auto_start" format="boolean"/>
+        <attr name="shimmer_duration" format="integer"/>
+        <attr name="shimmer_repeat_count" format="integer"/>
+        <attr name="shimmer_repeat_delay" format="integer"/>
+        <attr name="shimmer_repeat_mode" format="enum">
+            <enum name="restart" value="1"/>
+            <enum name="reverse" value="2"/>
+        </attr>
+        <attr name="shimmer_start_delay" format="integer"/>
+        <attr name="shimmer_direction" format="enum">
+            <enum name="left_to_right" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="bottom_to_top" value="3"/>
+        </attr>
+        <attr name="shimmer_dropoff" format="float"/>
+        <attr name="shimmer_fixed_width" format="dimension"/>
+        <attr name="shimmer_fixed_height" format="dimension"/>
+        <attr name="shimmer_intensity" format="float"/>
+        <attr name="shimmer_width_ratio" format="float"/>
+        <attr name="shimmer_height_ratio" format="float"/>
+        <attr name="shimmer_shape" format="enum">
+            <enum name="linear" value="0"/>
+            <enum name="radial" value="1"/>
+        </attr>
+        <attr name="shimmer_tilt" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="timeline_style" >
+        <attr name="marker" format="color|reference"/>
+        <attr name="line" format="color|reference"/>
+        <attr name="markerSize" format="dimension"/>
+        <attr name="lineSize" format="dimension"/>
+        <attr name="lineOrientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="linePadding" format="dimension"/>
+        <attr name="markerInCenter" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="Avatar">
+        <attr name="avatar_shape" format="string" />
+        <attr name="avatar" format="reference" />
+        <attr name="avatar_initials" format="string" />
+        <attr name="border_color" format="color" />
+        <attr name="border_width" format="dimension" />
+
+
+    </declare-styleable>
+    <declare-styleable name="SmartReplyList">
+        <attr name="replylist" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ComposeBox">
+        <attr name="color" format="color"/>
+    </declare-styleable>
+
+
+
+
+
+    <declare-styleable name="AudioRecordView">
+
+        <attr name="chunkWidth" format="dimension" />
+        <attr name="chunkMaxHeight" format="dimension" />
+        <attr name="chunkMinHeight" format="dimension" />
+        <attr name="chunkSpace" format="dimension" />
+        <attr name="chunkColor" format="color" />
+        <attr name="chunkRoundedCorners" format="boolean" />
+        <attr name="chunkAlignTo" format="enum">
+            <enum name="center" value="1" />
+            <enum name="bottom" value="2" />
+        </attr>
+        <attr name="chunkSoftTransition" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RecordView">
+        <attr name="slide_to_cancel_text" format="string" />
+        <attr name="slide_to_cancel_arrow" format="reference" />
+        <attr name="slide_to_cancel_margin_right" format="dimension" />
+        <attr name="slide_to_cancel_bounds" format="dimension" />
+        <attr name="slide_to_cancel_arrow_color" format="color" />
+        <attr name="counter_time_color" format="color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RecordButton">
+
+        <attr name="mic_icon" format="reference" />
+
+    </declare-styleable>
+</resources>

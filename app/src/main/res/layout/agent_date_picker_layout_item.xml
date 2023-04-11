@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="5"
+    android:id="@+id/AgentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="18dp"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:cardElevation="10dp"
+    app:rippleColor="?android:colorAccent">
+
+    <com.rovaindu.homeservice.utils.views.AutoFitTextView
+        android:autoSizeTextType="uniform"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/media_image"
+        android:text="@string/loading"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+</com.google.android.material.card.MaterialCardView>

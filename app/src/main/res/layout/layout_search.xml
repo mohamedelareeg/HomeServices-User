@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/countryPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country"
+            android:textColor="?android:colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <com.rovaindu.homeservice.utils.views.materialSpinner.MaterialSpinner
+            android:id="@+id/planSpinner"
+            app:ms_dropdown_max_height="350dp"
+            app:ms_dropdown_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/countryPanel"
+        android:id="@+id/cityPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_city"
+            android:textColor="?android:colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <com.rovaindu.homeservice.utils.views.materialSpinner.MaterialSpinner
+            android:id="@+id/planSpinner"
+            app:ms_dropdown_max_height="350dp"
+            app:ms_dropdown_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/cityPanel"
+        android:id="@+id/serviesPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category_sort"
+            android:textColor="?android:colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <com.rovaindu.homeservice.utils.views.materialSpinner.MaterialSpinner
+            android:id="@+id/planSpinner"
+            app:ms_dropdown_max_height="350dp"
+            app:ms_dropdown_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <com.rovaindu.homeservice.utils.views.TextViewAr
+        android:layout_margin="16dp"
+        android:layout_below="@+id/serviesPanel"
+        android:id="@+id/btnProcced"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/buy_button_bg"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="@string/search"
+        android:textAlignment="center"
+        android:textColor="?android:colorPrimaryDark"
+        android:textSize="18sp"
+        />
+</RelativeLayout>

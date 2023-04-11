@@ -1,0 +1,403 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorYellowBlack</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorYellowBlack</item>
+        <item name="colorAccent">@color/secondaryColorYellowBlack</item>
+
+    </style>
+
+    <style name="AppTheme.Map">
+        <item name="colorPrimary">#30962f</item>
+        <item name="colorPrimaryDark">#30962f</item>
+        <item name="colorAccent">#669966</item>
+        <item name="colorControlActivated">#268134</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.YELLOWBLACK" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorYellowBlack</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorYellowBlack</item>
+        <item name="colorAccent">@color/secondaryColorYellowBlack</item>
+    </style>
+    <style name="AppTheme.RED" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorRed</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorRed</item>
+        <item name="colorAccent">@color/secondaryColorRed</item>
+    </style>
+
+    <style name="AppTheme.PINK" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorPink</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorPink</item>
+        <item name="colorAccent">@color/secondaryColorPink</item>
+    </style>
+
+    <style name="AppTheme.PURPLE" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorPurple</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorPurple</item>
+        <item name="colorAccent">@color/secondaryColorPurple</item>
+    </style>
+
+    <style name="AppTheme.DEEPPURPLE" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorDeepPurple</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorDeepPurple</item>
+        <item name="colorAccent">@color/secondaryColorDeepPurple</item>
+    </style>
+
+    <style name="AppTheme.INDIGO" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorIndigo</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorIndigo</item>
+        <item name="colorAccent">@color/secondaryColorIndigo</item>
+    </style>
+
+    <style name="AppTheme.BLUE" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorBlue</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorBlue</item>
+        <item name="colorAccent">@color/secondaryColorBlue</item>
+    </style>
+
+    <style name="AppTheme.LIGHTBLUE" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorLightBlue</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorLightBlue</item>
+        <item name="colorAccent">@color/secondaryColorLightBlue</item>
+    </style>
+
+    <style name="AppTheme.CYAN" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorCyan</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorCyan</item>
+        <item name="colorAccent">@color/secondaryColorCyan</item>
+    </style>
+
+    <style name="AppTheme.TEAL" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorTeal</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorTeal</item>
+        <item name="colorAccent">@color/secondaryColorTeal</item>
+    </style>
+
+    <style name="AppTheme.GREEN" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorGreen</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorGreen</item>
+        <item name="colorAccent">@color/secondaryColorGreen</item>
+    </style>
+
+    <style name="AppTheme.LIGHTGREEN" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorLightGreen</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorLightGreen</item>
+        <item name="colorAccent">@color/secondaryColorLightGreen</item>
+    </style>
+
+    <style name="AppTheme.LIME" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorLime</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorLime</item>
+        <item name="colorAccent">@color/secondaryColorLime</item>
+    </style>
+
+    <style name="AppTheme.YELLOW" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorYellow</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorYellow</item>
+        <item name="colorAccent">@color/secondaryColorYellow</item>
+    </style>
+
+    <style name="AppTheme.AMBER" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorAmber</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorAmber</item>
+        <item name="colorAccent">@color/secondaryColorAmber</item>
+    </style>
+
+    <style name="AppTheme.ORANGE" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorOrange</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorOrange</item>
+        <item name="colorAccent">@color/secondaryColorOrange</item>
+    </style>
+
+    <style name="AppTheme.DEEPORANGE" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorDeepOrange</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorDeepOrange</item>
+        <item name="colorAccent">@color/secondaryColorDeepOrange</item>
+    </style>
+
+    <style name="AppTheme.BROWN" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorBrown</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorBrown</item>
+        <item name="colorAccent">@color/secondaryColorBrown</item>
+    </style>
+
+    <style name="AppTheme.GRAY" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorGray</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorGray</item>
+        <item name="colorAccent">@color/secondaryColorGray</item>
+    </style>
+
+    <style name="AppTheme.BLUEGRAY" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColorBlueGray</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColorBlueGray</item>
+        <item name="colorAccent">@color/secondaryColorBlueGray</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextPrimary">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextSecondary">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextTertiary">
+        <item name="android:textColor">?android:attr/textColorTertiary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextButton">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+
+        <!-- This needs to be set so that we can tint the toolbar and not change the background
+         resource. This is mainly so that QkReplyActivity can call setClipToOutline -->
+        <item name="android:background">?attr/colorPrimaryDark</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ToolbarText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="PreferenceCategory">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:colorAccent</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CollapsingToolbarCollapsedText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CollapsingToolbarExpandedText">
+        <item name="android:textSize">44dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ScheduledSampleTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_rectangle_outline_22dp</item>
+
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="android:paddingBottom">12dp</item>
+
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="DrawerRow">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+
+    </style>
+
+    <style name="DrawerText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="DrawerIcon">
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_width">24dp</item>
+
+    </style>
+
+
+    <style name="TextAppearance.Second" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+    <style name="TextAppearance.Second.Light" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/secondary_light</item>
+    </style>
+    <style name="TextAppearance.Title.Light" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/secondary_light</item>
+    </style>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/light_blue_500</item>
+    </style>
+
+    <style name="TextAppearance.Title" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary_dark_text</item>
+    </style>
+
+    <style name="TextAppearance.Large" parent="@android:style/TextAppearance">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/primary_dark_text</item>
+    </style>
+
+    <style name="TextAppearance.Title.White" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="TextAppearance.Toolbar.Expanded" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+
+    <style name="TextAppearance.Highlight" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/highlight_text</item>
+    </style>
+
+
+
+    <style name="TextAppearance.MainTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="fonts">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <!-- Text styles -->
+    <style name="Text" parent="TextAppearance.AppCompat"></style>
+    <style name="Text.Caption" parent="TextAppearance.AppCompat.Caption"></style>
+    <style name="Text.Small" parent="TextAppearance.AppCompat.Small"></style>
+    <style name="Text.Body1" parent="TextAppearance.AppCompat.Body1"></style>
+    <style name="Text.Body2" parent="TextAppearance.AppCompat.Body2"></style>
+    <style name="Text.Medium" parent="TextAppearance.AppCompat.Medium"></style>
+    <style name="Text.Large" parent="TextAppearance.AppCompat.Large"></style>
+    <style name="Text.Headline" parent="TextAppearance.AppCompat.Headline"></style>
+    <style name="Text.Title" parent="TextAppearance.AppCompat.Title"></style>
+    <style name="Text.Display1" parent="TextAppearance.AppCompat.Display1"></style>
+    <style name="Text.Subhead" parent="TextAppearance.AppCompat.Subhead"></style>
+    <style name="Text.Button" parent="TextAppearance.AppCompat.Button"></style>
+
+    <!-- Button Styles-->
+    <style name="Buton" parent="Widget.AppCompat.Button"></style>
+    <style name="Buton.Small" parent="Widget.AppCompat.Button.Small"></style>
+    <style name="Buton.Colored" parent="Widget.AppCompat.Button.Colored"></style>
+    <style name="Buton.Borderless" parent="Widget.AppCompat.Button.Borderless"></style>
+    <style name="Buton.Borderless.Colored" parent="Widget.AppCompat.Button.Borderless.Colored"></style>
+    <color name="highlight_text">#17a1d7</color>
+    <color name="primary_dark_text">#28333D</color>
+    <color name="secondary_light">#979797</color>
+    <color name="secondary_text">#434343</color>
+
+    <style name="MyTextStyle" parent="android:Widget.TextView">
+        <item name="android:textStyle">normal</item>
+        <!--        <item name="android:fontFamily">@font/josefinsans_regular</item>-->
+        <!--  <item name="android:includeFontPadding">false</item>-->
+    </style>
+
+    <style name="MyTextStyleThin" parent="android:Widget.TextView">
+        <item name="android:textStyle">normal</item>
+        <!--        <item name="android:fontFamily">@font/josefinsans_thin</item>-->
+        <!--     <item name="android:includeFontPadding">false</item>-->
+    </style>
+
+    <style name="MyTextStyleSemiBold" parent="android:Widget.TextView">
+        <item name="android:textStyle">normal</item>
+        <!--        <item name="android:fontFamily">@font/josefinsans_semibold</item>-->
+        <!--  <item name="android:includeFontPadding">false</item>-->
+    </style>
+
+
+    <style name="TextLabel" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="edittext">
+        <item name="android:background">@drawable/draw_box</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textinputlayout">
+        <item name="android:background">@drawable/draw_box</item>
+    </style>
+
+</resources>

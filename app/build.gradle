@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.rovaindu.homeservice"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        renderscriptSupportModeEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    //TODO
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+    //ToolbarDrawer
+    implementation 'com.mikepenz:materialdrawer:6.1.2'
+    // Navigation components
+    implementation "android.arch.navigation:navigation-fragment:1.0.0-alpha06"
+    implementation "android.arch.navigation:navigation-ui:1.0.0-alpha06"
+    implementation 'androidx.emoji:emoji:1.0.0'
+    implementation 'androidx.emoji:emoji-bundled:1.0.0'
+    implementation 'androidx.emoji:emoji-appcompat:1.0.0'
+
+    // glide image dependency
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    //lottie
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'com.airbnb.android:lottie:3.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //to animate image view
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    //support multiple screen size
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    //play gif images
+    implementation 'com.github.Cutta:GifView:1.4'
+
+    implementation 'com.github.florent37:shapeofview:1.4.7'
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.3.0'
+
+    // Retrofit dependencies
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //For serialising JSONP add converter-scalars
+
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    //Logging Network Calls
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    //ticker textview
+    implementation 'com.tomer:fadingtextview:2.5'
+
+    implementation 'com.github.jkwiecien:EasyImage:2.1.1'
+    implementation 'id.zelory:compressor:2.1.0'
+
+
+    implementation 'com.android.support:multidex:1.0.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+}
+apply plugin: 'com.google.gms.google-services'

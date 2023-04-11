@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.orders.TrackActivity"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/appbarLayout"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_home" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/appbarLayout"
+        android:id="@+id/text_action_bottom2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+
+
+
+        android:textSize="24sp"
+        android:textColor="?android:colorPrimaryDark"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:gravity="center"
+        android:layout_below="@+id/text_action_bottom2"
+        android:id="@+id/total_panel"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_cost"
+            style="@style/fonts"
+            android:id="@+id/total_Amont_label"
+            android:textColor="?android:colorPrimaryDark"/>
+
+        <TextView
+
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="?android:colorPrimaryDark"
+            android:text="@string/loading"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_below="@+id/total_panel"
+        android:id="@+id/id_panel"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_order_number"
+            style="@style/fonts"
+            android:id="@+id/id_label"
+            android:textColor="?android:colorPrimaryDark"/>
+
+        <TextView
+
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/id_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="?android:colorPrimaryDark"
+            android:text="@string/loading"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/id_panel"
+        android:id="@+id/shoppingCartRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:background="?android:colorPrimary"
+        android:layout_below="@+id/shoppingCartRecycleView"
+        android:gravity="center"
+        android:id="@+id/return_panel"
+
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="@string/we_provide"
+            android:layout_weight="3"/>
+
+        <com.tomer.fadingtextview.FadingTextView
+            android:layout_width="wrap_content"
+            android:textColor="?android:colorPrimaryDark"
+            app:timeout="500"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            app:texts="@array/examples_return"
+            android:layout_weight="7"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_below="@+id/return_panel"
+        android:id="@+id/cancel_panel"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btncancelorder"
+            android:background="@drawable/button_background"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/cancel_panel"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="@dimen/bottom_padding_recycler_view"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/dropshadow"
+        android:layout_marginTop="?actionBarSize"
+        android:background="@drawable/dropshadow"/>
+
+
+
+
+
+</RelativeLayout>
