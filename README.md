@@ -12,6 +12,10 @@
   </a>
 </p>
 
+<p align="center">
+  Home Services User App is an Android application that empowers users to effortlessly request handyman services, book scheduled appointments, communicate with customer services, and seamlessly chat with service providers in real-time.
+</p>
+
 ## Table of Contents
 
 - [Features](#features)
