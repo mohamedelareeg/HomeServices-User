@@ -36,6 +36,10 @@
 - **Customer Support:** Communicate with customer services for assistance.
 - **Real-time Chat:** Chat with service providers for better communication.
 
+## Flow Map
+
+![Flow Map](flowmap.png)
+
 ## Getting Started
 
 ### Prerequisites
