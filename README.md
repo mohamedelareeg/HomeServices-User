@@ -40,6 +40,10 @@
 
 ![Flow Map](flowmap.png)
 
+## Related Repositories
+
+- [Home Services Provider App](https://github.com/mohamedelareeg/HomeServices-Provider)
+
 ## Getting Started
 
 ### Prerequisites
